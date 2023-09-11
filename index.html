@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tag -->
+    <title>FINOMIMO - Serviços de Petshop</title>
+    <meta name="title" content="FINOMIMO - Serviços de Petshop">
+    <meta name="description" content="eCommerce">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+    <!-- Custom CSS Link -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <!-- Google Font Link (ctrl + shift + p) (markdown: open folder) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bangers&family=Carter+One&family=Nunito+Sans:wght@400;700&display=swap"
+      rel="stylesheet">
+
+    <!-- Preload Images -->
+    <link rel="preload" as="image" href="./assets/images/herodog.jpg">
+</head>
+
+<body id="top">
+
+<!-- #HEADER -->
+<header class="header" data-header>
+    <div class="container">
+
+        <div class="logo">
+            <span class="black">F</span>
+            <span class="orange">I</span>
+            <span class="black">N</span>
+            <span class="orange">O</span>
+            <span class="black">M</span>
+            <span class="orange">I</span>
+            <span class="black">M</span>
+            <span class="orange">O</span>
+          </div>
+
+        <ul class="options">
+            <li>Categorias</li>
+            <li>Serviços</li>
+            <li>Produtos</li>
+            <li>Fornecedores</li>
+            <li>Contato</li>
+        </ul>
+
+        <div class="header-actions">
+
+            <button class="action-btn" aria-label="Buscar">
+                <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
+            </button>
+
+            <button class="action-btn" aria-label="Usuário">
+                <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+            </button>
+
+            <button class="action-btn" aria-label="Colocar no carrinho">
+                <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+                <span class="btn-badge">0</span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<main>
+    <article>
+        <!-- #IMAGEM DE DESTAQUE -->
+        <section class="section hero has-bg-image" id="home" aria-label="home" style="background-image: url('./assets/images/herodog.jpg')">
+        <div class="container">
+            <h1 class="h1 hero title">
+                <span class="span">Tudo que o seu pet</span> mais ama!
+            </h1>
+            <p class="hero-text">Até 40% de desconto!!!</p>
+
+            <a href="#" class="btn">Compre agora!</a>
+
+            
+            <!-- Bloco Formulário Cadastro -->
+            <form class="signup-form" action="#" method="POST">
+
+                <fieldset class="form-header">
+                    <legend>Cadastro do(a) Cuidador(a)</legend>
+                </fieldset>
+
+                <div class="form-group">
+                  <label for="name">Nome:</label>
+                  <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email:</label>
+                  <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                  <label for="password">Senha:</label>
+                  <input type="password" id="password" name="password" required>
+                  <label for="confirm-password">Confirmar Senha:</label>
+                  <input type="password" id="confirm-password" name="confirm-password" required>
+                </div>
+                <div class="form-actions">
+                  <button type="submit">Cadastrar-se</button>
+                </div>
+                <div class="form-actions">
+                    <p><a href="#">Já possui uma conta?</a></p>
+                </div>
+            </form>
+
+            <!-- Bloco Agendamento de Serviços -->
+            <div class="service-booking">
+                <fieldset class="form-header">
+                    <legend>Agendamento de Serviços</legend>
+                </fieldset>
+                <div class="form-group">
+                    <label for="service-type">Escolha do Serviço:</label>
+                    <select id="service-type" name="service-type" required>
+                        <option value="servico2">Spa</option>
+                        <option value="servico1">Banho e Tosa</option>
+                        <option value="servico2">Treinamentos</option>
+                        <option value="servico2">Serviços Veterinários</option>
+                        <option value="servico2">Exames de Laboratório</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="service-date">Data do Serviço:</label>
+                    <input type="date" id="service-date" name="service-date" required>
+                </div>
+                <div class="form-group">
+                    <label for="tele-pickup">Opção de Tele-Busca (sem taxa adicional):</label>
+                    <input type="checkbox" id="tele-pickup" name="tele-pickup">
+                    <label for="tele-pickup">Sim!!!</label>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit">Agendar Serviço</button>
+                </div>
+            </div>
+
+            <!-- Bloco Cadastro Pet -->
+            <div class="pet-registration">
+                <fieldset class="form-header">
+                    <legend>Cadastro do Pet</legend>
+                </fieldset>
+                <div class="form-group">
+                    <label for="pet-name">Nome do Pet:</label>
+                    <input type="text" id="pet-name" name="pet-name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="pet-breed">Raça do Pet:</label>
+                    <input type="text" id="pet-breed" name="pet-breed" required>
+                </div>
+                <div class="form-group">
+                    <label for="pet-temperament">Temperamento do Pet:</label>
+                    <input type="text" id="pet-temperament" name="pet-temperament" required>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit">Cadastrar Pet</button>
+                </div>
+            </div>
+
+        </div>
+        </section>
+
+        <!-- #CATEGORIAS -->
+        <section class="section category" aria-label="category">
+            <div class="container">
+                <h2 class="h2 section-title">
+                    <span class="span">Categorias</span>
+                </h2>
+
+                <ul class="has-scrollbar">
+                    <li class="scrollbar-item">
+                        <div class="category-card">
+                            <!--
+                            <figure class="card-banner img-holder" style="--width: 330; --height: 300;">
+                                <img src="./assets/images/category-1.jpg" width="330" height="300" loading="lazy" alt="Comida para gatos" class="img-cover">
+                            </figure>
+                              -->
+
+                            <figure class="card-banner img-holder" width="330" height="330" loading="lazy" alt="">
+                                <img src="./assets/images/category-1.jpg" width="330" height="300" loading="lazy" alt="Comida para gatos" class="img-cover">
+                            </figure>
+
+                            <h3 class="h">
+                                <a href="#" class="card-title">Comidas para gatos</a>
+                            </h3>
+                        </div>
+                    </li>
+
+                    <li class="scrollbar-item">
+                        <div class="category-card">
+                            <figure class="card-banner img-holder" width="330" height="330">
+                                <img src="./assets/images/category-2.jpg" width="330" height="300" loading="lazy" alt="Comida para gatos" class="img-cover">
+                            </figure>
+
+                            <h3 class="h3">
+                                <a href="#" class="card-title">Brinquedos para gatos </a>
+                            </h3>
+                        </div>
+                    </li>
+
+                    <li class="scrollbar-item">
+                        <div class="category-card">
+                            <figure class="card-banner img-holder" width="330" height="330">
+                                <img src="./assets/images/category-3.jpg" width="330" height="300" loading="lazy" alt="Comida para gatos" class="img-cover">
+                            </figure>
+
+                            <h3 class="h3">
+                                <a href="#" class="card-title">Comidas para cachorros </a>
+                            </h3>
+                        </div>
+                    </li>
+
+                    <li class="scrollbar-item">
+                        <div class="category-card">
+                            <figure class="card-banner img-holder" width="330" height="330">
+                                <img src="./assets/images/category-4.jpg" width="330" height="300" loading="lazy" alt="Comida para gatos" class="img-cover">
+                            </figure>
+
+                            <h3 class="h3">
+                                <a href="#" class="card-title">Brinquedos para cachorros </a>
+                            </h3>
+                        </div>
+                    </li>
+
+                    <li class="scrollbar-item">
+                        <div class="category-card">
+                            <figure class="card-banner img-holder" width="330" height="330">
+                                <img src="./assets/images/category-5.jpg" width="330" height="300" loading="lazy" alt="Comida para gatos" class="img-cover">
+                            </figure>
+
+                            <h3 class="h3">
+                                <a href="#" class="card-title">Suplementos para cachorros </a>
+                            </h3>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- #SERVIÇOS -->
+        <section class="section ofertas" aria-label="ofertas">
+            <div class="container">
+                <h2 class="h2 section-title">
+                    <span class="span">Serviços</span>
+                </h2>
+                <ul class="grid-list">
+                    <li>
+                        <div class="offer-card has-bg-image img-holder" style="background-image:url('./assets/images/offer-banner-1.jpg'); --width:540; --height:374;">
+                            <p class="card-subtitle">Apenas Aqui!</p>
+                            <h3 class="h3 card-title">
+                                Desconto às terças<span class="span">Banho e Tosa</span>
+                            </h3>
+
+                            <a href="#" class="btn">Leia Mais</a>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="offer-card has-bg-image img-holder" style="background-image:url('./assets/images/offer-banner-2.jpg'); --width:540; --height:374;">
+                            <p class="card-subtitle">Cuidado Máximo!</p>
+                            <h3 class="h3 card-title">
+                                Terapias e petiscos <span class="span">Spa e Bem-Estar</span>
+                            </h3>
+
+                            <a href="#" class="btn">Leia Mais</a>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="offer-card has-bg-image img-holder" style="background-image:url('./assets/images/offer-banner-3.jpg'); --width:540; --height:374;">
+                            <p class="card-subtitle">Opção Fina!</p>
+                            <h3 class="h3 card-title">
+                                Adestramento de pets <span class="span">Treinamentos</span>
+                            </h3>
+
+                            <a href="#" class="btn">Leia Mais</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- #PRODUTOS -->
+        <section class="section product" id="shop" aria-label="product">
+            <div class="container">
+                <h2 class="h2 section-title">
+                    <span class="span">Produtos</span>
+                </h2>
+                <ul class="grid-list">
+                    <li>
+                        <div class="product-card">
+                            <div class="card-banner img-holder" style="--width:360; --height:360;">
+                                <img src="./assets/images/product-1.jpg" width="360" height="360" loading="lazy" alt="racao para cachorro" class="img-cover hover">
+                                <button class="card-action-btn" aria-label="add to card" title="Add To Card">
+                                    <ion-icon name="bag-add-outline" aria-hidden="true"></ion-icon>
+                                </button>
+                            </div>
+
+                            <div class="card-content">
+                                <div class="wrapper">
+                                    <div class="rating-wrapper">
+                                        <ion-icon name="star" aria-hidden="true"></ion-icon>
+                                        <ion-icon name="star" aria-hidden="true"></ion-icon>
+                                        <ion-icon name="star" aria-hidden="true"></ion-icon>
+                                        <ion-icon name="star" aria-hidden="true"></ion-icon>
+                                        <ion-icon name="star" aria-hidden="true"></ion-icon>
+                                    </div>
+                                    <span class="span">(1)</span>
+                                </div>
+                                <h3 class="h3">
+                                    <a href="" class="card-title">Ração para cachorro</a>
+                                </h3>
+
+                                <data class="card-price" value="15">$15.00</data>
+
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="product-card">
+                            <div class="card-banner img-holder" style="--width:360; --height:360;">
+                                <img src="./assets/images/product-2.jpg" width="360" height="360" loading="lazy" alt="pedaços de camarao" class="img-cover hover">
+                                <button class="card-action-btn" aria-label="add to card" title="Add To Card">
+                                    <ion-icon name="bag-add-outline" aria-hidden="true"></ion-icon>
+                                </button>
+                            </div>
+
+                            <div class="card-content">
+                                <div class="wrapper">
+                                    <div class="rating-wrapper gray">
+                                        <ion-icon name="star" aria-hidden="true"></ion-icon>
+                                        <ion-icon name="star" aria-hidden="true"></ion-icon>
+                                        <ion-icon name="star" aria-hidden="true"></ion-icon>
+                                        <ion-icon name="star" aria-hidden="true"></ion-icon>
+                                        <ion-icon name="star" aria-hidden="true"></ion-icon>
+                                    </div>
+                                    <span class="span">(0)</span>
+                                </div>
+                                <h3 class="h3">
+                                    <a href="" class="card-title">Pedaços de camarão</a>
+                                </h3>
+
+                                <data class="card-price" value="45">$45.00</data>
+
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="product-card">
+                            <div class="card-banner img-holder" style="--width:360; --height:360;">
+                                <img src="./assets/images/product-3.jpg" width="360" height="360" loading="lazy" alt="racao para peixe" class="img-cover hover">
+                                <button class="card-action-btn" aria-label="add to card" title="Add To Card">
+                                    <ion-icon name="bag-add-outline" aria-hidden="true"></ion-icon>
+                                </button>
+                            </div>
+
+                            <div class="card-content">
+                                <div class="wrapper">
+                                    <div class="rating-wrapper gray">
+                                        <ion-icon name="star" aria-hidden="true"></ion-icon>
+                                        <ion-icon name="star" aria-hidden="true"></ion-icon>
+                                        <ion-icon name="star" aria-hidden="true"></ion-icon>
+                                        <ion-icon name="star" aria-hidden="true"></ion-icon>
+                                        <ion-icon name="star" aria-hidden="true"></ion-icon>
+                                    </div>
+                                    <span class="span">(0)</span>
+                                </div>
+                                <h3 class="h3">
+                                    <a href="" class="card-title">Ração para peixe</a>
+                                </h3>
+
+                                <data class="card-price" value="45">$45.00</data>
+
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="product-card">
+                            <div class="card-banner img-holder" style="--width:360; --height:360;">
+                                <img src="./assets/images/product-4.jpg" width="360" height="360" loading="lazy" alt="racao para passaros" class="img-cover hover">
+                                <button class="card-action-btn" aria-label="add to card" title="Add To Card">
+                                    <ion-icon name="bag-add-outline" aria-hidden="true"></ion-icon>
+                                </button>
+                            </div>
+
+                            <div class="card-content">
+                                <div class="wrapper">
+                                    <div class="rating-wrapper gray">
+                                        <ion-icon name="star" aria-hidden="true"></ion-icon>
+                                        <ion-icon name="star" aria-hidden="true"></ion-icon>
+                                        <ion-icon name="star" aria-hidden="true"></ion-icon>
+                                        <ion-icon name="star" aria-hidden="true"></ion-icon>
+                                        <ion-icon name="star" aria-hidden="true"></ion-icon>
+                                    </div>
+                                    <span class="span">(0)</span>
+                                </div>
+                                <h3 class="h3">
+                                    <a href="" class="card-title">Ração para pássaros</a>
+                                </h3>
+
+                                <data class="card-price" value="45">$49.00</data>
+
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </section>
+
+        <!-- #OUTROS SERVIÇOS -->
+        <section class="section service" aria-label="service">
+            <div class="container">
+                <img src="./assets/images/bone.png" width="123" height="136" loading="lazy" alt="" class="img">
+                <h2 class="h2 section-title">
+                    <span class="span">Tudo que seu pet precisa...</span> Com muito amor e carinho!
+                </h2>
+
+                <ul class="grid-list">
+                    <li>
+                        <div class="service-card">
+                            <figure class="card-icon">
+                                <img src="./assets/images/service-icon-1.png" width="78" height=78 loading="lazy" alt="service icon">
+                            </figure>
+
+                            <h3 class="h3 card-title">Que tal entrega gratuita?</h3>
+
+                            <p class="card-text">Faça seu pedido até as 14h, horário de Brasília, para obter entrega gratuita em pedidos acima de $35.00, hoje mesmo!</p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="service-card">
+                            <figure class="card-icon">
+                                <img src="./assets/images/service-icon-2.png" width="78" height=78 loading="lazy" alt="service icon">
+                            </figure>
+
+                            <h3 class="h3 card-title">E devolução em até trinta dias?</h3>
+                            <p class="card-text">Só aqui! 30% de desconto no seu primeiro pedido, mais 5% de desconto em todos os pedidos futuros!</p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="service-card">
+                            <figure class="card-icon">
+                                <img src="./assets/images/service-icon-3.png" width="78" height=78 loading="lazy" alt="service icon">
+                            </figure>
+
+                            <h3 class="h3 card-title">Sim, pagamento seguro!</h3>
+                            <p class="card-text">Aqui, preocupamo-nos com a sua segurança e almejamos a sua confiança!</p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="service-card">
+                            <figure class="card-icon">
+                                <img src="./assets/images/service-icon-4.png" width="78" height=78 loading="lazy" alt="service icon">
+                            </figure>
+
+                            <h3 class="h3 card-title">Atendimento 24/7, também!</h3>
+                            <p class="card-text">Para qualquer dúvida, qualquer problema e qualquer sugestão!</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- #CTA PROMPT -->
+        <section class="cta has-bg-image" aria-label="cta" style="background-image:url(./assets/images/cta-bg.jpg)">
+            <div class="container">
+                <figure class="cta-banner">
+                    <img src="./assets/images/cta-banner.png" alt="cat" class="w-100">
+                </figure>
+
+                <div class="cta-content">
+
+                    <img src="./assets/images/ok_icon.png" width="120" height="35" alt="taste guarantee" class="img">
+
+                    <h2 class="h2 section-title">Substituição garantida!</h2>
+
+                    <p class="section-text">
+                        Na Finomimo, se o seu pet não gostar da comida, ela poderá ser substituída, e nós auxiliares você a encontrar o melhor para o seu pet, pelo preço mais acessível. Eles merecem!
+                    </p>
+
+                    <a href="#" class="btn">Descubra Mais</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- #MARCA -->
+        <section class="section brand" aria-label="brand">
+            <div class="container">
+                <h2 class="h2 section-title">
+                    <span class="span">Marcas</span> Populares
+                </h2>
+                <ul class="has-scrollbar">
+                    <li class="scrollbar-item">
+                        <div class="brand-card img-holder" style="--width:150; --height:150;">
+                            <img src="./assets/images/brand-1.jpg" width="150" height="150" loading="lazy" alt="brand logo" class="img-cover">
+                        </div>
+                    </li>
+
+                    <li class="scrollbar-item">
+                        <div class="brand-card img-holder" style="--width:150; --height:150;">
+                            <img src="./assets/images/brand-2.jpg" width="150" height="150" loading="lazy" alt="brand logo" class="img-cover">
+                        </div>
+                    </li>
+
+                    <li class="scrollbar-item">
+                        <div class="brand-card img-holder" style="--width:150; --height:150;">
+                            <img src="./assets/images/brand-3.jpg" width="150" height="150" loading="lazy" alt="brand logo" class="img-cover">
+                        </div>
+                    </li>
+
+                    <li class="scrollbar-item">
+                        <div class="brand-card img-holder" style="--width:150; --height:150;">
+                            <img src="./assets/images/brand-4.jpg" width="150" height="150" loading="lazy" alt="brand logo" class="img-cover">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- #RODAPÉ -->
+        <footer class="footer" style="background-image:url(./assets/images/footer-bg.jpg)">
+            <div class="footer-top section">
+                <div class="container">
+                    <div class="footer-brand">
+                        <a href="#" class="logo">Finomimo</a>
+                        <p class="footer-text">
+                            Se você tiver qualquer dúvida, contate-nos através de <a href="#" class="link">suporte@gmail.com</a>
+                        </p>
+
+                        <ul class="contact-list">
+
+                            <li class="contact-item">
+                                <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
+
+                                <adress class="adress">
+                                    Rio Grande do Sul
+                                </adress>
+                            </li>
+
+                            <li class="contact-item">
+                                <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
+                            </li>
+
+                            <a href="tel:+51933333333" class="contact-link">(+51) 9-3333-3333</a>
+                        </ul>
+
+                        <ul class="social-list">
+
+                            <li>
+                                <a href="" class="social-link">
+                                    <ion-icon name="logo-facebook"></ion-icon>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="" class="social-link">
+                                    <ion-icon name="logo-twitter"></ion-icon>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="" class="social-link">
+                                    <ion-icon name="logo-pinterest"></ion-icon>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="" class="social-link">
+                                    <ion-icon name="logo-instagram"></ion-icon>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <ul class="footer-list">
+                        <li>
+                            <p class="footer-list-title">Corporativo</p>
+                        </li>
+
+                        <li>
+                            <a href="#" class="footer-link">Carreira</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="footer-link">Sobre nós</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="footer-link">Contate-nos</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="footer-link">Perguntas frequentes</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="footer-link">Fornecedores</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="footer-link">Programa de afiliados</a>
+                        </li>
+                    </ul>
+
+                    <ul class="footer-list">
+                        <li>
+                            <p class="footer-list-title">Informações</p>
+                        </li>
+
+                        <li>
+                            <a href="#" class="footer-link">Loja online</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="footer-link">Políticas de privacidade</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="footer-link">Política de reembolso</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="footer-link">Política de envio</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="footer-link">Termos de serviço</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="footer-link">Acompanhar pedido</a>
+                        </li>
+
+                    </ul>
+
+                    <ul class="footer-list">
+                        <li>
+                            <p class="footer-list-title">Serviços</p>
+                        </li>
+
+                        <li>
+                            <a href="#" class="footer-link">Spa</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="footer-link">Banho e tosa</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="footer-link">Treinamentos</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="footer-link">Serviços veterinários</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="footer-link">Exames laboratoriais</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="container">
+                    <p class="copyright">
+                        &copy; 2023 Made by <a href="#" class="copyright-link">(...)</a>
+                    </p>
+
+                    <img src="./assets/images/payment.png" width="397" height="32" loading="lazy" alt="payment method" class="img">
+                </div>
+            </div>
+        </footer>
+
+    </article>
+</main>
+
+<!-- Função voltar para cima -->
+<a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+</a>
+
+<!-- Link Javascript -->
+<script src="./assets/js/script.js" defer></script>
+
+<!-- Link Ionicon (Markdown)-->
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+</body>
+</html>
